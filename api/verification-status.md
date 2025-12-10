@@ -1,45 +1,68 @@
-@extends('\_layouts.master') @section('body\_class', 'documentation help') @section('title', 'API Method: Verification Status - ZeroSSL') @section('canonical\_url', 'https://zerossl.com/documentation/api/verification-status') @section('meta\_description', 'You can use the Verification Status API endpoint to get the current domain verification status for a specific SSL certificate.') @section('body')
+# REST API Verification Status
 
-@include('\_partials.documentation-sidebar', \['active\_article' => $active\_article\])
 
-# [REST API](/documentation/api "ZeroSSL Documentation") Verification Status
 
 ## Get Domain Verification StatusHTTPS GET
 
+
+
 To retrieve information about the domain verification status for a specific certificate using the ZeroSSL API, simply make an HTTPS GET request to the API endpoint below, specifying your certificate using its ID (hash) inside the URL's `{id}` parameter, as shown below.
 
-Only for Email Verification Please note that the verification status endpoint is only useful if Email Verification is your selected domain verification method. Other verification methods (CNAME and File Upload) usually provide instant verification results using the [Verify Domains endpoint](/documentation/api/verify-domains "API Method: Verify Domains").
+
+
+Only for Email Verification
+Please note that the verification status endpoint is only useful if Email Verification is your selected domain verification method. Other verification methods (CNAME and File Upload) usually provide instant verification results using the [Verify Domains endpoint](/documentation/api/verify-domains).
+
+
 
 **API Request URL:**
 
+
+```
 api.zerossl.com/certificates/{id}/status
+```
+
+
 
 **HTTPS GET Request Parameters:**
 
+
+
 | Parameter | Description |
 | --- | --- |
-| `access_key` | `access_key`**\[Required\]** Use this parameter to specify your API access key. |
-| `{id}` | `{id}`**\[Required\]** Use this parameter to specify your certificate ID / hash. |
+| `access_key` | `access_key`**[Required]** Use this parameter to specify your API access key. |
+| `{id}` | `{id}`**[Required]** Use this parameter to specify your certificate ID / hash. |
+
+
 
 **API Response:**
 
+
+
 If your API request has been successful, you will receive a JSON API response containing verification status information for each of the domains in your certificate.
 
+
+```
 {
-"validation\_completed": 0,
-"details": {
-"domain.com": {
-"method": "postmaster@domain.com",
-"status": "Email Sent"
-},
-"www.domain.com": {
-"method": "postmaster@domain.com",
-"status": "Email Sent"
+    "validation_completed": 0,
+    "details": {
+        "domain.com": {
+            "method": "postmaster@domain.com",
+            "status": "Email Sent"
+        },
+        "www.domain.com": {
+            "method": "postmaster@domain.com",
+            "status": "Email Sent"
+        }
+    }
 }
-}
-}
+```
+
+
 
 **Response Objects:**
+
+
 
 | Parameter | Description |
 | --- | --- |
@@ -50,30 +73,7 @@ If your API request has been successful, you will receive a JSON API response co
 
 
 
-[Resend Verification](/documentation/api/resend-verification)
 
-Blue Notice Blue Note: Information
 
-Yellow Notice Yellow Note: Information
 
-Red Notice Red Note: Information
-
-*   List item
-*   List item
-*   List item
-
-1.  List item
-2.  List item
-3.  List item
-
-*   [List item](#)
-*   [List item](#)
-*   [List item](#)
-
-`Code lone-standing`
-
-`Code in paragraph`
-
-\*/ ?>
-
-@endsection
+                                  [Resend Verification](/documentation/api/resend-verification)

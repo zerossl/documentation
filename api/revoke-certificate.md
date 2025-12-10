@@ -1,42 +1,72 @@
-@extends('\_layouts.master') @section('body\_class', 'documentation help') @section('title', 'API Method: Cancel Certificate - ZeroSSL') @section('canonical\_url', 'https://zerossl.com/documentation/api/revoke-certificate') @section('meta\_description', 'Learn how to revoke an existing SSL certificate using the ZeroSSL API.') @section('body')
+# REST API Revoke Certificate
 
-@include('\_partials.documentation-sidebar', \['active\_article' => $active\_article\])
 
-# [REST API](/documentation/api "ZeroSSL Documentation") Revoke Certificate
 
 ## Revoke CertificateHTTPS POST
 
+
+
 To revoke an issued certificate using the ZeroSSL API you will need to make an HTTPS POST request to the API endpoint below and specify your certificate using its ID (hash) inside the URL's `{id}` parameter, as shown below.
+
+
 
 Possible reasons why you might want to revoke an issued certificate:
 
-*   There is any risk that its private key might have been compromised (urgent)
-*   The domain it was issued for is no longer operational
-*   The contents of the certificate are wrong
 
-Warning Make sure to use this endpoint with care and do only revoke certificates you really want to revoke. Only certificates with status `issued` can be revoked. If a certificate has already been successfully revoked you will get a success response nevertheless.
+
+* There is any risk that its private key might have been compromised (urgent)
+* The domain it was issued for is no longer operational
+* The contents of the certificate are wrong
+
+
+
+Warning
+Make sure to use this endpoint with care and do only revoke certificates you really want to revoke. Only certificates with status `issued` can be revoked.
+If a certificate has already been successfully revoked you will get a success response nevertheless.
+
+
 
 **API Request URL:**
 
+
+
+```
 api.zerossl.com/certificates/{id}/revoke
+```
+
+
 
 **HTTPS POST Request Parameters:**
 
+
+
 | Parameter | Description |
 | --- | --- |
-| `access_key` | `access_key`**\[Required\]** Use this parameter to specify your API access key. |
-| `{id}` | `{id}`**\[Required\]** Use this parameter to specify the certificate ID (hash) of the certificate to be revoked. |
-| `reason` | `reason`<br><br>One of:<br><br>*   `Unspecified`: Default<br>*   `keyCompromise`: Compromised private key<br>*   `affiliationChanged`: Subjects' name or identity information has changed<br>*   `Superseded`: Certificate has been replaced<br>*   `cessationOfOperation`: Authorized domain names are no longer owned |
+| `access_key` | `access_key`**[Required]** Use this parameter to specify your API access key. |
+| `{id}` | `{id}`**[Required]** Use this parameter to specify the certificate ID (hash) of the certificate to be revoked. |
+| `reason` | `reason`  One of:                                           * `Unspecified`: Default * `keyCompromise`: Compromised private key * `affiliationChanged`: Subjects' name or identity information has changed * `Superseded`: Certificate has been replaced * `cessationOfOperation`: Authorized domain names are no longer owned |
+
+
 
 **API Response:**
 
+
+
 If your API request has been successful, you will receive a simple JSON response indicating that your API request was successful.
 
+
+
+```
 {
-"success": 1
+    "success": 1
 }
+```
+
+
 
 **Response Objects:**
+
+
 
 | Parameter | Description |
 | --- | --- |
@@ -44,30 +74,7 @@ If your API request has been successful, you will receive a simple JSON response
 
 
 
-[Cancel Certificate](/documentation/api/cancel-certificate)
 
-Blue Notice Blue Note: Information
 
-Yellow Notice Yellow Note: Information
 
-Red Notice Red Note: Information
-
-*   List item
-*   List item
-*   List item
-
-1.  List item
-2.  List item
-3.  List item
-
-*   [List item](#)
-*   [List item](#)
-*   [List item](#)
-
-`Code lone-standing`
-
-`Code in paragraph`
-
-\*/ ?>
-
-@endsection
+                            [Cancel Certificate](/documentation/api/cancel-certificate)

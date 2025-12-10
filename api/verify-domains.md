@@ -1,88 +1,138 @@
-@extends('\_layouts.master') @section('body\_class', 'documentation help') @section('title', 'API Method: Verify Domains - ZeroSSL') @section('canonical\_url', 'https://zerossl.com/documentation/api/verify-domains') @section('meta\_description', 'Learn how to use the ZeroSSL API to verify domains via email verification as well as verification via (DNS) CNAME and HTTP File Upload.') @section('body')
+CNAME and HTTP File Upload.')
 
-@include('\_partials.documentation-sidebar', \['active\_article' => $active\_article\])
 
-# [REST API](/documentation/api "ZeroSSL Documentation") Verify Domains
+
+# REST API Verify Domains
+
+
 
 ## Verify DomainsHTTPS POST
 
+
+
 In order for your certificate to be issued, all domains included in your certificate will need to be verified. There are four methods that can be used to verify domains: email verification, verification via DNS (CNAME), verification via HTTP file upload and verification via HTTPS file upload.
+
+
 
 To initiate domain verification, you will need to make a request to the endpoint below carrying your API access key as well as some HTTPS POST request parameters. Please note that `{id}` must be replaced with your certificate ID (hash).
 
+
+
 **API Request URL:**
 
+
+```
 api.zerossl.com/certificates/{id}/challenges
+```
+
+
 
 **HTTPS GET Request Parameters:**
 
+
+
 | Parameter | Description |
 | --- | --- |
-| `access_key` | `access_key`**\[Required\]** Use this parameter to specify your API access key. |
-| `{id}` | `{id}`**\[Required\]** Use this parameter to specify your certificate ID / hash. |
+| `access_key` | `access_key`**[Required]** Use this parameter to specify your API access key. |
+| `{id}` | `{id}`**[Required]** Use this parameter to specify your certificate ID / hash. |
+
+
 
 **HTTPS POST Request Parameters:**
 
+
+
 | Parameter | Description |
 | --- | --- |
-| `validation_method` | `validation_method`**\[Required\]** Use this parameter to specify the verification method to use for this certificate. Possible values: `EMAIL` (email verification), `CNAME_CSR_HASH` (CNAME verification), `HTTP_CSR_HASH` (HTTP file upload), `HTTPS_CSR_HASH` (HTTPS file upload) |
+| `validation_method` | `validation_method`**[Required]** Use this parameter to specify the verification method to use for this certificate. Possible values: `EMAIL` (email verification), `CNAME_CSR_HASH` (CNAME verification), `HTTP_CSR_HASH` (HTTP file upload), `HTTPS_CSR_HASH` (HTTPS file upload) |
 | `validation_email` | `validation_email`If your selected verification method is **email verification**, use this parameter to specify one or multiple comma-seperated verification email addresses. You need to specify one verification email address per domain. |
+
+
 
 Verification Methods
 
 Please note that you can use the API endpoint above to re-initiate domain verification using the same or another verification method at any given time before the certificate is validated and issued.
 
+
 IP Address certificates **can only be verified using the File Upload method**. Other domain validation methods, such as Email or CNAME, are not supported for IP-based certificates.
+
+
+
 
 
 
 Email Verification **API Response**
 
-If you selected email verification and your API request was successful, you will receive a verification email to the selected verification email address for each of the domains in your certificate. In order for your certificate to be issued, you will need to follow the steps shown in these verification emails. If you are not sure about how to verify your domains via email, you can [learn more about email verification here](/help/verify-domains "Learn how to verify your domains").
+
+
+If you selected email verification and your API request was successful, you will receive a verification email to the selected verification email address for each of the domains in your certificate. In order for your certificate to be issued, you will need to follow the steps shown in these verification emails. If you are not sure about how to verify your domains via email, you can [learn more about email verification here](/help/verify-domains).
+
+
 
 For as long as your domains remain unverified, the status of your certificate will be `pending_validation`. As soon as your domains have been verified and your certificate has been issued, the certificate status will be changed to `issued` automatically by our system.
 
-Check Verification Status To check the email verification status of the domains in your certificate, you can use the API's [Status endpoint](/documentation/api/verification-status "API Method: Check Domain Verification Status").
+
+
+Check Verification Status
+To check the email verification status of the domains in your certificate, you can use the API's [Status endpoint](/documentation/api/verification-status).
+
+
+
 
 
 
 CNAME **API Response**
 
+
+
 If the verification of your CNAME-records was successful, the ZeroSSL API will return your entire certificate object with status `pending_validation`. From this moment it will take just a few seconds (in some cases, up to 5-10 minutes) for our system to validate and issue your certificate. As soon as your certificate has been issued, the certificate status will change to `issued` automatically.
+
+
 
 CNAME **Possible Errors**
 
+
+
 If the verification of some or all of your CNAME-records fails, the API will return an error object in JSON format outlining in detail which of the domains could be verified and which could not be verified.
+
+
 
 You will find an example error response for CNAME verification below:
 
+
+```
 {
-"success": false,
-"error": {
-"code": 0,
-"type": "domain\_control\_validation\_failed",
-"details": {
-"domain.com": {
-"domain.com": {
-"cname\_found": 0,
-"record\_correct": 0,
-"target\_host": "\_2B449B729284AA7CB56014584F261FBF",
-"target\_record": "A1063BBA157D.686A709A3.4BAD7A.CA.COM",
-"actual\_record": ""
-},
-"www.domain.com": {
-"cname\_found": 0,
-"record\_correct": 0,
-"target\_host": "\_2B449B729284AA7CB56014584F261FBF",
-"target\_record": "A1063BBA157D.686A709A3.4BAD7A.CA.COM",
-"actual\_record": ""
+    "success": false,
+    "error": {
+        "code": 0,
+        "type": "domain_control_validation_failed",
+        "details": {
+            "domain.com": {
+                "domain.com": {
+                    "cname_found": 0,
+                    "record_correct": 0,
+                    "target_host": "_2B449B729284AA7CB56014584F261FBF",
+                    "target_record": "A1063BBA157D.686A709A3.4BAD7A.CA.COM",
+                    "actual_record": ""
+                },
+                "www.domain.com": {
+                    "cname_found": 0,
+                    "record_correct": 0,
+                    "target_host": "_2B449B729284AA7CB56014584F261FBF",
+                    "target_record": "A1063BBA157D.686A709A3.4BAD7A.CA.COM",
+                    "actual_record": ""
+                }
+            }
+        }
+    }
 }
-}
-}
-}
-}
+```
+
+
 
 **Response Objects:**
+
+
 
 | Parameter | Description |
 | --- | --- |
@@ -99,60 +149,86 @@ You will find an example error response for CNAME verification below:
 
 
 
+
+
+
 HTTP file validation **API Response**
+
+
 
 If the verification of your uploaded files was successful, the ZeroSSL API will return your entire certificate object with status `pending_validation`. From this moment it will take just a few seconds (in some cases, up to 5-10 minutes) for our system to validate and issue your certificate. As soon as your certificate has been issued, the certificate status will change to `issued` automatically.
 
+
+
 HTTP file validation **Possible Errors**
+
+
 
 If the verification of some or all of your uploaded files fails, the API will return an error object in JSON format outlining in detail which of the domains could be verified and which could not be verified.
 
+
+
 You will find an example error response for HTTP file upload verification below:
 
+
+
+```
 {
-"success": false,
-"error": {
-"code": 0,
-"type": "domain\_control\_validation\_failed",
-"details": {
-"zero.example-zero.com": {
-"http://zero.example.com/.well-known/pki-validation/E437B2F258578249498AA2A3708D6951.txt": {
-"file\_found": 0,
-"error": true,
-"error\_slug": "wrong\_file\_content",
-"error\_info": "The validation file was found, but the contents are wrong."
+    "success": false,
+    "error": {
+        "code": 0,
+        "type": "domain_control_validation_failed",
+        "details": {
+            "zero.example-zero.com": {
+                "http://zero.example.com/.well-known/pki-validation/E437B2F258578249498AA2A3708D6951.txt": {
+                    "file_found": 0,
+                    "error": true,
+                    "error_slug": "wrong_file_content",
+                    "error_info": "The validation file was found, but the contents are wrong."
+                }
+            },
+            "one.example-one.com": {
+                "http://one.example.com/.well-known/pki-validation/E437B2F258578249498AA2A3708D6951.txt": {
+                    "file_found": 0,
+                    "error": true,
+                    "error_slug": "bad_response_code",
+                    "error_info": "Server responded with status code: 404"
+                }
+            },
+            "example.com": {
+                "validation_successful": true
+            }
+        }
+    }
 }
-},
-"one.example-one.com": {
-"http://one.example.com/.well-known/pki-validation/E437B2F258578249498AA2A3708D6951.txt": {
-"file\_found": 0,
-"error": true,
-"error\_slug": "bad\_response\_code",
-"error\_info": "Server responded with status code: 404"
-}
-},
-"example.com": {
-"validation\_successful": true
-}
-}
-}
-}
+```
+
+
 
 
 
 HTTP file validation **Explanation of error response**
 
+
+
 Explanation of example:
 
-*   _example.com_: The file was found and successfully verified
-*   _zero.example-zero.com_: The file was found, but the content is wrong.
-*   _one.example-one.com_: The server responded with status code 404, which means the file was not yet uploaded.
+
+* *example.com*: The file was found and successfully verified
+* *zero.example-zero.com*: The file was found, but the content is wrong.
+* *one.example-one.com*: The server responded with status code 404, which means the file was not yet uploaded.
+
+
+
 
 
 
 Explanation of error slug:
 
+
 Recently we have implemented more granular error reporting for the HTTP file validation. If validation fails, in many cases (except for server failures) you may want to work with validation error slugs:
+
+
 
 | Error Slug | Description |
 | --- | --- |
@@ -164,30 +240,4 @@ Recently we have implemented more granular error reporting for the HTTP file val
 
 
 
-[Download Certificate](/documentation/api/download-certificate)
-
-Blue Notice Blue Note: Information
-
-Yellow Notice Yellow Note: Information
-
-Red Notice Red Note: Information
-
-*   List item
-*   List item
-*   List item
-
-1.  List item
-2.  List item
-3.  List item
-
-*   [List item](#)
-*   [List item](#)
-*   [List item](#)
-
-`Code lone-standing`
-
-`Code in paragraph`
-
-\*/ ?>
-
-@endsection
+                                  [Download Certificate](/documentation/api/download-certificate)
