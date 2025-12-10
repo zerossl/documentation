@@ -1,9 +1,5 @@
-CNAME and HTTP File Upload.')
-
-
 
 # REST API Verify Domains
-
 
 
 ## Verify DomainsHTTPS POST
