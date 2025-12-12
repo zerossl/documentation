@@ -1,0 +1,25 @@
+{
+  "name": "vitepress",
+  "version": "1.0.0",
+  "description": "TBD: The ZeroSSL API and ACME documentation. Please note that this is work in progress!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev .vitepress",
+    "docs:build": "vitepress build .vitepress",
+    "docs:preview": "vitepress preview .vitepress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerossl/documentation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerossl/documentation/issues"
+  },
+  "homepage": "https://github.com/zerossl/documentation#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
