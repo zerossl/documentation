@@ -11,7 +11,7 @@ To retrieve information about the domain verification status for a specific cert
 
 
 Only for Email Verification
-Please note that the verification status endpoint is only useful if Email Verification is your selected domain verification method. Other verification methods (CNAME and File Upload) usually provide instant verification results using the [Verify Domains endpoint](/documentation/api/verify-domains).
+Please note that the verification status endpoint is only useful if Email Verification is your selected domain verification method. Other verification methods (CNAME and File Upload) usually provide instant verification results using the [Verify Domains endpoint](/documentation/docs/api/verify-domains).
 
 
 

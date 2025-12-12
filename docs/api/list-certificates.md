@@ -157,7 +157,7 @@ If your API request has been successful, you will receive a JSON API response co
 | `result_count` | `result_count`Returns the number of results shown on the current page. |
 | `page` | `page`Returns the current page number. |
 | `limit` | `limit`Returns the specified pagination page limit. |
-| `results` | `results`Returns an array of certificates. For detailed information about certificate response objects, please refer to the [Get Certificate](/documentation/api/get-certificate) section. |
+| `results` | `results`Returns an array of certificates. For detailed information about certificate response objects, please refer to the [Get Certificate](/documentation/docs/api/get-certificate) section. |
 
 
 

@@ -1,10 +1,9 @@
 # Documentation ACME
 
+## Explore API Documentation
 
-
-## Overview
-
-
+- [Generate EAB credentials](/acme/generate-eab-credentials)
+- [Error Codes](/acme/error-codes)
 
 ACME stands for Automatic Certificate Management Environment and provides an easy-to-use method of automating interactions between a certificate authority (like ZeroSSL) and a web server. There are many ACME clients out there, all free to use and created to simplify use of the ACME protocol.
 
@@ -48,7 +47,8 @@ https://acme.zerossl.com/v2/DV90
 
 
 
-Unlike for the ZeroSSL API for which you are using a ZeroSSL access key, for using our ACME service you have to create and use EAB (External Account Binding) credentials within your ZeroSSL dashboard. To generate EAB credentials click "Generate" at the bottom of the [Developer section]({{ $page->appBaseUrl }}/developer) of your ZeroSSL management console or [use the ACME REST API](/documentation/acme/generate-eab-credentials).
+Unlike for the ZeroSSL API for which you are using a ZeroSSL access key, for using our ACME service you have to create and use EAB (External Account Binding) credentials within your ZeroSSL dashboard.
+To generate EAB credentials click "Generate" at the bottom of the Developer section of your ZeroSSL management console or use the ACME REST API.(/documentation/docs/acme/generate-eab-credentials).
 
 
 
@@ -59,7 +59,3 @@ EAB credentials are not stored in your account, please make sure to note them so
 
 Please Note
 Since March 2022 all EAB credentials are **reusable**. One set of EAB credentials should be enough for most use cases. EAB credentials are limited to a maximum per user/per day.
-
-
-
-                                  [Generate EAB credentials](/documentation/acme/generate-eab-credentials)

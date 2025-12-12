@@ -6,9 +6,9 @@
 
 
 
-Note
+::: info
 The errors listed here are relevant for the EAB credentials endpoint, the ACME API itself ([https://acme.zerossl.com/v2/DV90](https://acme.zerossl.com/v2/DV90)) has its own set of errors.
-
+:::
 
 
 **Errors are responded in JSON just as in the normal ZeroSSL API:**

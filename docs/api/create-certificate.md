@@ -56,7 +56,7 @@ Please note that in order for your certificate to be created you will be require
 
 
 Validate your CSR
-If you want to validate your CSR first you can use the [validate CSR endpoint](/documentation/api/validate-csr) for the check.
+If you want to validate your CSR first you can use the [validate CSR endpoint](/documentation/docs/api/validate-csr) for the check.
 
 
 

@@ -70,7 +70,7 @@ For as long as your domains remain unverified, the status of your certificate wi
 
 
 Check Verification Status
-To check the email verification status of the domains in your certificate, you can use the API's [Status endpoint](/documentation/api/verification-status).
+To check the email verification status of the domains in your certificate, you can use the API's [Status endpoint](/documentation/docs/api/verification-status).
 
 
 
