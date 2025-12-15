@@ -1,6 +1,6 @@
 # Documentation ACME
 
-## Explore API Documentation
+## Explore ACME Documentation
 
 - [Generate EAB credentials](/acme/generate-eab-credentials)
 - [Error Codes](/acme/error-codes)
