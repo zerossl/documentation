@@ -16,7 +16,7 @@ Welcome to the ZeroSSL API section. Here you can find all available endpoints an
 - [List Certificates](/api/list-certificates)
 - [Resend Verification](/api/resend-verification)
 - [Revoke Certificate](/api/revoke-certificate)
-- [Validate CSR](/api/validate-ccsr)
+- [Validate CSR](/api/validate-csr)
 - [Verification Status](/api/verification-status)
 - [Verify Domains](/api/verify-domains)
 
