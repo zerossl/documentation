@@ -8,13 +8,16 @@ hero:
   tagline: Complete API and ACME documentation for SSL certificate management
   actions:
     - theme: brand
-      text: Get Started
+      text: API Documentation
       link: /api/index
+    - theme: brand
+      text: ACME Documentation
+      link: /acme/index
     - theme: alt
       text: View on GitHub
       link: https://github.com/zerossl/documentation
   image:
-    src: zerossl-logo.svg
+    src: zerossl_logo.svg
     alt: ZeroSSL
 
 features:
@@ -37,7 +40,6 @@ features:
 - [ACME-Docs](/acme/index)
 
 ## Quick Links
-SS
 - [API-Create Certificate](/api/create-certificate)
 - [Error Codes](/acme/error-codes)
 
