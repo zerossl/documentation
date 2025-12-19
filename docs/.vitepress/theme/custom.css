@@ -1,0 +1,15 @@
+/* ===== Global Page Title Style ===== */
+.VPDoc h1 {
+    background: #4f6fd8;          /* Blue bar */
+    color: #ffffff;
+    padding: 18px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    display: inline-block;
+}
+
+/* Remove default underline spacing */
+.VPDoc h1 + .header-anchor {
+    display: none;
+}
