@@ -6,19 +6,19 @@ Welcome to the ZeroSSL API section. Here you can find all available endpoints an
 ## Explore API Documentation
 
 - [Overview](/api/overview)
-- [Cancel Certificate](/api/cancel-certificate)
 - [Create Certificate](/api/create-certificate)
-- [Download Certificate](/api/download-certificate)
+- [Verify Domains](/api/verify-domains)
+- [Download Certificate ZIP](/api/download-certificate)
 - [Download Certificate Inline](/api/download-certificate-inline)
-- [Error Codes](/api/error-codes)
-- [Generate EAB Credentials](/api/generate-eab-credentials)
 - [Get Certificate](/api/get-certificate)
 - [List Certificates](/api/list-certificates)
+- [Verification Status](/api/verification-status)
 - [Resend Verification](/api/resend-verification)
 - [Revoke Certificate](/api/revoke-certificate)
+- [Cancel Certificate](/api/cancel-certificate)
 - [Validate CSR](/api/validate-csr)
-- [Verification Status](/api/verification-status)
-- [Verify Domains](/api/verify-domains)
+- [Error Codes](/api/error-codes)
+
 
 ---
 

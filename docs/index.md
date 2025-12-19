@@ -1,48 +1,52 @@
 ---
-
 layout: home
+
 
 hero:
   name: ZeroSSL
   text: Documentation
-  tagline: Complete API and ACME documentation for SSL certificate management
+  tagline: Handling SSL certificates manually can consume significant time. Learn about the ZeroSSL REST API, automation via ACME clients, and more.
   actions:
     - theme: brand
-      text: API Documentation
-      link: /api/index
+      text: REST API
+      link: /api/
     - theme: brand
-      text: ACME Documentation
-      link: /acme/index
+      text: ACME
+      link: /acme/
     - theme: alt
       text: View on GitHub
       link: https://github.com/zerossl/documentation
-  image:
-    src: zerossl_logo.svg
-    alt: ZeroSSL
+      icon: github
 
-features:
-  - icon: 🔒
-    title: SSL Certificates
-    details: Manage SSL certificates with our powerful REST API
-  - icon: ⚡
-    title: ACME Protocol
-    details: Full ACME v2 protocol support for automated certificate management
-  - icon: 📚
-    title: Comprehensive Docs
-    details: Detailed guides, examples, and reference documentation
-  - icon: 🚀
-    title: Fast & Reliable
-    details: High-performance API with 99.9% uptime guarantee
+
 ---
 
-## Main Documentation
-- [API-Docs](/api/index)
-- [ACME-Docs](/acme/index)
+## Introduction
+
+Handling SSL certificates manually can consume significant time, which is why we are offering multiple solutions designed to help you conveniently automate SSL certificate management. In this documentation, you will learn about the ZeroSSL REST API, automation via ACME clients, our own ZeroSSL ACME Bot (ZeroSSL Bot), and more.
+
+## To get started right away, choose one of the options below:
+
+- **[REST API](/api/)** - Full API documentation for programmatic certificate management
+- **[ACME Automation](/acme/)** - Automated certificate management using ACME protocol
+- **[ZeroSSL Bot](/bot/)** - Our simplified automation solution
 
 ## Quick Links
-- [API-Create Certificate](/api/create-certificate)
+
+### REST API
+- [Overview](/api/overview)
+- [Create Certificate](/api/create-certificate)
+- [Verify Domains](/api/verify-domains)
+- [Download Certificate](/api/download-certificate)
+- [Error Codes](/api/error-codes)
+
+### ACME
+- [Getting Started](/acme/getting-started)
+- [EAB Credentials](/acme/generate-eab-credentials)
 - [Error Codes](/acme/error-codes)
 
 ## Support
 
-Need help? Contact us at [support@zerossl.com](mailto:support@zerossl.com)
+Looking for non-developer help resources? Visit our **[Help Center](https://support.zerossl.com)**
+
+Need technical assistance? Contact us at **[support@zerossl.com](mailto:support@zerossl.com)**

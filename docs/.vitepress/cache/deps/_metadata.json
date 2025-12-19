@@ -1,40 +1,58 @@
 {
-  "hash": "0ad86074",
-  "configHash": "0a6c7bd8",
+  "hash": "097a3014",
+  "configHash": "fdd4c8e3",
   "lockfileHash": "35c9f796",
-  "browserHash": "0ebca191",
+  "browserHash": "43c3492e",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "6be9bd8c",
+      "fileHash": "58be01a2",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "b7435278",
+      "fileHash": "3ed0e29d",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "b3efbee7",
+      "fileHash": "16c66c41",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/integrations/useFocusTrap": {
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
+      "fileHash": "1ebc532a",
+      "needsInterop": false
+    },
+    "vitepress > mark.js/src/vanilla.js": {
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
+      "file": "vitepress___mark__js_src_vanilla__js.js",
+      "fileHash": "c2e52d7d",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "1f971284",
       "needsInterop": false
     },
     "@theme/index": {
       "src": "../../../../node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "c91a5018",
+      "fileHash": "addad421",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-4GKOY3W3": {
-      "file": "chunk-4GKOY3W3.js"
+    "chunk-OZ7RWL5P": {
+      "file": "chunk-OZ7RWL5P.js"
     },
-    "chunk-EKBJ2FPM": {
-      "file": "chunk-EKBJ2FPM.js"
+    "chunk-D66RQT5R": {
+      "file": "chunk-D66RQT5R.js"
     }
   }
 }
