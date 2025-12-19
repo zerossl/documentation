@@ -22,7 +22,7 @@ export default defineConfig({
     themeConfig: {
         // Logo in top-left navbar
         logo: '/zerossl_logo.svg',
-        siteTitle: 'ZeroSSL',
+        siteTitle: '',
 
         nav: [
             { text: 'Home', link: '/' },
@@ -84,7 +84,7 @@ export default defineConfig({
 
         footer: {
             message: 'Part of Sectigo',
-            copyright: 'Copyright © 2024 ZeroSSL'
+            copyright: 'Copyright © 2025 ZeroSSL'
         },
 
         editLink: {
