@@ -41,7 +41,7 @@ export default defineConfig({
                 text: 'REST API',
                 collapsible: true,
                 items: [
-                        { text: 'Overview', link: '/api/overview' },
+                        { text: 'Overview', link: '/api/' },
                         { text: 'Create Certificate', link: '/api/create-certificate' },
                         { text: 'Get Certificate', link: '/api/get-certificate' },
                         { text: 'List Certificates', link: '/api/list-certificates' },
