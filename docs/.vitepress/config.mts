@@ -2,6 +2,8 @@
 // .vitepress/config.mts
 import { defineConfig } from 'vitepress'
 
+const year = new Date().getFullYear()
+
 export default defineConfig({
     title: 'ZeroSSL',
     description: 'Complete API and ACME documentation for SSL certificate management',
@@ -21,7 +23,10 @@ export default defineConfig({
 
     themeConfig: {
         // Logo in top-left navbar
-        logo: '/zerossl_logo.svg',
+        logo: {
+            light: '/zerossl_logo.svg', // logo for light mode
+            dark: '/zerossl_logo_dark_theme.svg'    // logo for dark mode
+        },
         siteTitle: '',
 
         nav: [
@@ -72,14 +77,16 @@ export default defineConfig({
         socialLinks: [{ icon: 'github', link: 'https://github.com/zerossl/documentation' }],
 
         footer: {
-            message: 'Part of Sectigo',
-            copyright: 'Copyright © 2025 ZeroSSL'
+            message: 'Part of HID',
+            copyright: `© ${year} ZeroSSL, Inc. All rights reserved.`
         },
 
         //editLink: {
            // pattern: 'https://github.com/zerossl/documentation/edit/main/docs/:path',
            // text: 'Edit this page on GitHub'
        // },
+
+
 
         // Search configuration
         search: {

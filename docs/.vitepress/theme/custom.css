@@ -104,4 +104,17 @@
     background: transparent;
 }
 
+.top-navigation {
+    background-color: #f2f2f2; /* light gray */
+    color: #000;
+    color-scheme: light;
+}
+
+.top-navigation a {
+    color: #000;
+}
+
+.top-navigation a:hover {
+    color: #333;
+}
 
