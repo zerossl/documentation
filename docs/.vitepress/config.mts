@@ -32,53 +32,42 @@ export default defineConfig({
             { text: 'Help Center', link: 'https://support.zerossl.com', target: '_blank' }
         ],
 
-        sidebar: {
-            '/api/': [
-                {
-                    text: 'REST API',
-                    items: [{ text: 'Overview', link: '/api/overview' }]
-                },
-                {
-                    text: 'Certificate Management',
-                    items: [
+        sidebar: [
+            {
+                text: 'Welcome',
+                link: '/'
+            },
+            {
+                text: 'REST API',
+                collapsible: true,
+                items: [
+                        { text: 'Overview', link: '/api/overview' },
                         { text: 'Create Certificate', link: '/api/create-certificate' },
                         { text: 'Get Certificate', link: '/api/get-certificate' },
                         { text: 'List Certificates', link: '/api/list-certificates' },
-                        { text: 'Download Certificate (ZIP)', link: '/api/download-certificate' },
-                        { text: 'Download Certificate (inline)', link: '/api/download-certificate-inline' },
-                        { text: 'Cancel Certificate', link: '/api/cancel-certificate' },
-                        { text: 'Revoke Certificate', link: '/api/revoke-certificate' }
-                    ]
-                },
-                {
-                    text: 'Domain Verification',
-                    items: [
+                        { text: 'Download Certificate ZIP', link: '/api/download-certificate' }, // ZIP
+                        { text: 'Download Certificate Inline', link: '/api/download-certificate-inline' },
                         { text: 'Verify Domains', link: '/api/verify-domains' },
                         { text: 'Verification Status', link: '/api/verification-status' },
-                        { text: 'Resend Verification', link: '/api/resend-verification' }
-                    ]
-                },
-                {
-                    text: 'Utilities',
-                    items: [
+                        { text: 'Revoke Certificate', link: '/api/revoke-certificate' },
+                        { text: 'Resend Verification', link: '/api/resend-verification' },
                         { text: 'Validate CSR', link: '/api/validate-csr' },
                         { text: 'Generate EAB Credentials', link: '/api/generate-eab-credentials' },
                         { text: 'Error Codes', link: '/api/error-codes' }
-                    ]
-                }
-            ],
-            '/acme/': [
-                {
-                    text: 'ACME',
-                    items: [
-                        { text: 'Overview', link: '/acme/' },
-                        { text: 'Getting Started', link: '/acme/getting-started' },
-                        { text: 'EAB Credentials', link: '/acme/generate-eab-credentials' },
-                        { text: 'Error Codes', link: '/acme/error-codes' }
-                    ]
-                }
-            ]
-        },
+
+                ]
+            },
+            {
+                text: 'ACME',
+                collapsible: true,
+                items: [
+                    { text: 'Overview', link: '/acme/' },
+                    { text: 'Generate EAB Credentials', link: '/acme/generate-eab-credentials' },
+                    { text: 'Error Codes', link: '/acme/error-codes' }
+                ]
+            }
+        ],
+
 
         socialLinks: [{ icon: 'github', link: 'https://github.com/zerossl/documentation' }],
 
@@ -87,10 +76,10 @@ export default defineConfig({
             copyright: 'Copyright © 2025 ZeroSSL'
         },
 
-        editLink: {
-            pattern: 'https://github.com/zerossl/documentation/edit/main/docs/:path',
-            text: 'Edit this page on GitHub'
-        },
+        //editLink: {
+           // pattern: 'https://github.com/zerossl/documentation/edit/main/docs/:path',
+           // text: 'Edit this page on GitHub'
+       // },
 
         // Search configuration
         search: {
@@ -121,9 +110,7 @@ export default defineConfig({
             }
         },
 
-        outline: {
-            level: [2, 3],
-            label: 'On this page'
-        }
+        // Remove the right-side "On this page" outline
+        outline: false
     }
 })

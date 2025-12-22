@@ -41,7 +41,6 @@ Handling SSL certificates manually can consume significant time, which is why we
 - [Error Codes](/api/error-codes)
 
 ### ACME
-- [Getting Started](/acme/getting-started)
 - [EAB Credentials](/acme/generate-eab-credentials)
 - [Error Codes](/acme/error-codes)
 
