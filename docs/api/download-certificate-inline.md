@@ -2,7 +2,10 @@
 
 
 
-## Download Certificate (inline)HTTPS GET
+<div class="split-heading">
+  <h2>Download Certificate (inline)</h2>
+  <span class="method">HTTPS GET</span>
+</div>
 
 
 

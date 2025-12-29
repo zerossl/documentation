@@ -4,6 +4,11 @@
 
 ## Revoke CertificateHTTPS POST
 
+<div class="split-heading">
+  <h2>Revoke Certificate</h2>
+  <span class="method">HTTPS POST</span>
+</div>
+
 
 
 To revoke an issued certificate using the ZeroSSL API you will need to make an HTTPS POST request to the API endpoint below and specify your certificate using its ID (hash) inside the URL's `{id}` parameter, as shown below.

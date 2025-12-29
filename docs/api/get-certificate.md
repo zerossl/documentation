@@ -2,7 +2,10 @@
 
 
 
-## Get CertificateHTTPS GET
+<div class="split-heading">
+  <h2>Get Certificate</h2>
+  <span class="method">HTTPS GET</span>
+</div>
 
 
 

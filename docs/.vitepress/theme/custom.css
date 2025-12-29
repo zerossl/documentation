@@ -118,3 +118,20 @@
     color: #333;
 }
 
+.split-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.split-heading h2 {
+    margin: 0;
+}
+
+.split-heading .method {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.2rem;
+
+}

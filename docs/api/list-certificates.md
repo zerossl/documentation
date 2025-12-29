@@ -1,8 +1,10 @@
 # REST API List Certificates
 
 
-
-## List CertificatesHTTPS GET
+<div class="split-heading">
+  <h2>List Certificates</h2>
+  <span class="method">HTTPS GET</span>
+</div>
 
 
 
@@ -10,10 +12,10 @@ To retrieve information about an existing certificate using the ZeroSSL API you 
 
 
 
-Note
+::: info Note
 In case you have more than 100 ACME certificates you need at least a ZeroSSL basic plan in order to work with those in Dashboard or API.
 In case you have more than 100K ACME certificates you need at least a ZeroSSL premium plan in order to work with those in Dashboard or API.
-
+:::
 
 
 **API Request URL:**

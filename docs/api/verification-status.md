@@ -4,6 +4,12 @@
 
 ## Get Domain Verification StatusHTTPS GET
 
+<div class="split-heading">
+  <h2>Get Domain Verification Status</h2>
+  <span class="method">HTTPS GET</span>
+</div>
+
+
 
 
 To retrieve information about the domain verification status for a specific certificate using the ZeroSSL API, simply make an HTTPS GET request to the API endpoint below, specifying your certificate using its ID (hash) inside the URL's `{id}` parameter, as shown below.

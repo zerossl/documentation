@@ -2,7 +2,10 @@
 
 
 
-## Create CertificateHTTPS POST
+<div class="split-heading">
+  <h2>Create Certificate</h2>
+  <span class="method">HTTPS POST</span>
+</div>
 
 
 
@@ -43,21 +46,21 @@ api.zerossl.com/certificates
 
 
 
-Breaking change (BC) for few user agents
+::: warning Breaking change (BC) for few user agents
 The ZeroSSL REST API redirects HTTP requests to HTTPS with a 301 permanent redirect. According to the specification 301 redirects may not change the request method.
 Some clients which are not sticking to the specification will change a POST into a GET request to the same URL and this can lead to unexpected results. Make sure to use the correct request method.
 More information: [Mozilla HTTP Status Code 301](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301).
+:::
 
 
-
-CSR is required
+::: warning CSR is required
 Please note that in order for your certificate to be created you will be required to specify an existing CSR using the `certificate_csr` parameter. [Here's a tool](https://csrgenerator.com/) you can use to generate a new CSR.
+:::
 
 
-
-Validate your CSR
+::: info Validate your CSR
 If you want to validate your CSR first you can use the [validate CSR endpoint](/documentation/docs/api/validate-csr) for the check.
-
+:::
 
 
 

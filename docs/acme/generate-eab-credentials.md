@@ -2,7 +2,11 @@
 
 
 
-## Generate ACME EAB Credentials via APIHTTPS POST
+<div class="split-heading">
+  <h2>Generate ACME EAB Credentials via API</h2>
+  <span class="method">HTTPS POST</span>
+</div>
+
 
 
 
@@ -10,9 +14,9 @@ To generate a set of ACME EAB credentials using the ZeroSSL API you will need to
 
 
 
-Please Note
+::: info Please note
 Since March 2022 all EAB credentials are **reusable**. One set of EAB credentials should be enough for most use cases. EAB credentials are limited to a maximum per user/per day.
-
+:::
 
 
 **API Request URL:**

@@ -48,16 +48,17 @@ export default defineConfig({
                 items: [
                         { text: 'Overview', link: '/api/' },
                         { text: 'Create Certificate', link: '/api/create-certificate' },
-                        { text: 'Get Certificate', link: '/api/get-certificate' },
-                        { text: 'List Certificates', link: '/api/list-certificates' },
+                        { text: 'Verify Domains', link: '/api/verify-domains' },
                         { text: 'Download Certificate ZIP', link: '/api/download-certificate' }, // ZIP
                         { text: 'Download Certificate Inline', link: '/api/download-certificate-inline' },
-                        { text: 'Verify Domains', link: '/api/verify-domains' },
+                        { text: 'Get Certificate', link: '/api/get-certificate' },
+                        { text: 'List Certificates', link: '/api/list-certificates' },
                         { text: 'Verification Status', link: '/api/verification-status' },
-                        { text: 'Revoke Certificate', link: '/api/revoke-certificate' },
                         { text: 'Resend Verification', link: '/api/resend-verification' },
+                        { text: 'Revoke Certificate', link: '/api/revoke-certificate' },
+                         { text: 'Cancel Certificate', link: '/api/cancel-certificate' },
                         { text: 'Validate CSR', link: '/api/validate-csr' },
-                        { text: 'Generate EAB Credentials', link: '/api/generate-eab-credentials' },
+                        //{ text: 'Generate EAB Credentials', link: '/api/generate-eab-credentials' },
                         { text: 'Error Codes', link: '/api/error-codes' }
 
                 ]

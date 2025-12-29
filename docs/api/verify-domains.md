@@ -2,7 +2,10 @@
 # REST API Verify Domains
 
 
-## Verify DomainsHTTPS POST
+<div class="split-heading">
+  <h2>Verify Domains</h2>
+  <span class="method">HTTPS POST</span>
+</div>
 
 
 
@@ -45,13 +48,13 @@ api.zerossl.com/certificates/{id}/challenges
 
 
 
-Verification Methods
+::: warning Verification Methods
 
 Please note that you can use the API endpoint above to re-initiate domain verification using the same or another verification method at any given time before the certificate is validated and issued.
 
 
 IP Address certificates **can only be verified using the File Upload method**. Other domain validation methods, such as Email or CNAME, are not supported for IP-based certificates.
-
+:::
 
 
 
@@ -68,10 +71,9 @@ If you selected email verification and your API request was successful, you will
 For as long as your domains remain unverified, the status of your certificate will be `pending_validation`. As soon as your domains have been verified and your certificate has been issued, the certificate status will be changed to `issued` automatically by our system.
 
 
-
-Check Verification Status
+::: warning Check Verification Status
 To check the email verification status of the domains in your certificate, you can use the API's [Status endpoint](/documentation/docs/api/verification-status).
-
+:::
 
 
 
