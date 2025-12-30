@@ -1,6 +1,9 @@
 # Documentation ACME
 
-## Explore ACME Documentation
+<div class="split-heading">
+  <h2>Explore ACME Documentation</h2>
+  <span class="method"></span>
+</div>
 
 - [Generate EAB credentials](/acme/generate-eab-credentials)
 - [Error Codes](/acme/error-codes)

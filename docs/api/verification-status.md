@@ -2,8 +2,6 @@
 
 
 
-## Get Domain Verification StatusHTTPS GET
-
 <div class="split-heading">
   <h2>Get Domain Verification Status</h2>
   <span class="method">HTTPS GET</span>

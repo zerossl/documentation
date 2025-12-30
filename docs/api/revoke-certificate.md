@@ -1,9 +1,6 @@
 # REST API Revoke Certificate
 
 
-
-## Revoke CertificateHTTPS POST
-
 <div class="split-heading">
   <h2>Revoke Certificate</h2>
   <span class="method">HTTPS POST</span>

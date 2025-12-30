@@ -2,7 +2,11 @@
 
 
 
-## Error Codes
+<div class="split-heading">
+  <h2>Error Codes</h2>
+  <span class="method"></span>
+</div>
+
 
 
 
