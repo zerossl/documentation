@@ -2,7 +2,10 @@
 
 
 
-## Download Certificate (ZIP)HTTPS GET
+<div class="split-heading">
+  <h2>Download Certificate (ZIP)</h2>
+  <span class="method">HTTPS GET</span>
+</div>
 
 
 

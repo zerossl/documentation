@@ -1,0 +1,152 @@
+/* ===== Global Page Title Style ===== */
+.VPDoc h1 {
+    background: #4f6fd8;
+    color: #ffffff;
+    padding: 18px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    display: inline-block;
+}
+
+/* Remove default underline spacing */
+.VPDoc h1 + .header-anchor {
+    display: none;
+}
+
+/* ===== Full-width tables ===== */
+.vp-doc table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+}
+
+/* Table header */
+.vp-doc thead th {
+    background: #f3f4f6;
+    font-weight: 700;
+    padding: 14px;
+    text-align: left;
+}
+
+/* Table cells */
+.vp-doc tbody td {
+    padding: 16px;
+    vertical-align: top;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Error code badges */
+.vp-doc td code {
+    background: #fff1f2;
+    color: #be123c;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+/* ===== Info / Note callout ===== */
+.vp-doc .custom-block.info {
+    background: #eaf0ff;
+    border-left: 5px solid #4f6fd8;
+    padding: 20px 24px;
+    border-radius: 6px;
+}
+
+.vp-doc .custom-block.info .custom-block-title {
+    color: #1f3fb7;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dark .vp-doc .custom-block.info {
+    background: #1e3a5f;
+}
+
+.dark .vp-doc .custom-block.info .custom-block-title {
+     color: white;
+     font-size: 18px;
+     font-weight: 700;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+ .dark .vp-doc thead th {
+    background: black;
+    font-weight: 700;
+    padding: 14px;
+    text-align: left;
+}
+
+.vp-doc pre {
+    background: #1f2d3d !important;   /* dark blue */
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+/* Inline code */
+.vp-doc code {
+    color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Code text color */
+.vp-doc [class*='language-'] code {
+    color: #ffd866;
+    background: transparent;
+}
+
+.top-navigation {
+    background-color: #f2f2f2; /* light gray */
+    color: #000;
+    color-scheme: light;
+}
+
+.top-navigation a {
+    color: #000;
+}
+
+.top-navigation a:hover {
+    color: #333;
+}
+
+.split-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e7eb; /* Optional: add a bottom border */
+}
+
+.split-heading h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-top: none !important;
+    flex: 1; /* Allow h2 to take available space */
+}
+
+.split-heading .method {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.2rem;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Dark mode support for split heading */
+.dark .split-heading {
+    border-bottom-color: #374151;
+}
+
+.dark .split-heading .method {
+    color: #4f6fd8;
+}

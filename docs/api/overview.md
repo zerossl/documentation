@@ -71,9 +71,9 @@ To get started right away, please find a list of available API methods below:
 
 
 
-* [Download Certificate (.zip)](/documentation/api/download-certificate)
-* [Get Verification Status](/documentation/api/verification-status)
-* [Resend Verification Email](/documentation/api/resend-verification)
+* [Download Certificate (.zip)](/documentation/docs/api/download-certificate)
+* [Get Verification Status](/documentation/docs/api/verification-status)
+* [Resend Verification Email](/documentation/docs/api/resend-verification)
 
 
 

@@ -2,7 +2,10 @@
 
 
 
-## Cancel CertificateHTTPS POST
+<div class="split-heading">
+  <h2>Cancel Certificate</h2>
+  <span class="method">HTTPS POST</span>
+</div>
 
 
 
@@ -10,9 +13,9 @@ To cancel an existing certificate using the ZeroSSL API you will need to make an
 
 
 
-Limitations
+::: warning Limitations
 Please note that only certificates with status `draft` or `pending_validation` can be cancelled.
-
+:::
 
 
 **API Request URL:**

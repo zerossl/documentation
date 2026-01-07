@@ -2,7 +2,11 @@
 
 
 
-## Resend Verification EmailHTTPS POST
+
+<div class="split-heading">
+  <h2>Resend Verification Email</h2>
+  <span class="method">HTTPS POST</span>
+</div>
 
 
 

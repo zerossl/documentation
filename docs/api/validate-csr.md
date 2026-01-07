@@ -3,7 +3,10 @@
 
 
 
-## Validate certificate signing request (CSR)HTTPS POST
+<div class="split-heading">
+  <h2>Validate certificate signing request (CSR)</h2>
+  <span class="method">HTTPS POST</span>
+</div>
 
 
 
